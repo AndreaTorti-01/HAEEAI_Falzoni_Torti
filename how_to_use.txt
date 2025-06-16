@@ -1,0 +1,11 @@
+install gtk (linux) by following instructions txt
+
+use snip_snip_gtk and show_npy_gtk to create snippets
+
+use create_dataset to convert snippets into dataset
+
+use norm_train to normalize, train on normalized data and test
+
+use convert_to_lite to convert to tflite model and c array
+
+the saved model is 100% accurate and around 100KB in size.
