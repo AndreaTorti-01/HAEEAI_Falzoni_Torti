@@ -14,10 +14,9 @@ This project demonstrates significant advancements in embedded AI solutions, eff
 ## Materials
 
 * Arduino Nano 33 BLE Sense (for data collection and local inference)
-* NVIDIA and AMD GPUs (for efficient AI model training)
-* Laptop computer (for comprehensive data recording, management, and analysis)
+* NVIDIA GPUs and laptop CPUs(for efficient AI model training)
+* Laptop and Desktop computers (for comprehensive data recording, management, and analysis)
 * iPhone equipped with a custom-built web application tailored specifically for precise and intuitive real-time event marking
-* Additional mounting hardware for secure attachment to shin guards
 
 ## Methods
 
@@ -104,7 +103,7 @@ model.fit(X_train, y_train_i,
           callbacks=[early_stop])
 ```
 
-Despite rigorous testing of advanced augmentation and optimization techniques, the inherent variability and high quality of the collected dataset made complex augmentation largely unnecessary, thus the training prioritized simplicity and efficiency.
+More complex networks and training techniques were tested, but the inherent variability and high quality of the collected dataset made it largely unnecessary.
 
 ### Quantization and local inference
 
@@ -112,7 +111,7 @@ The trained neural network underwent quantization to 8-bit precision using Tenso
 
 ## Quantitative results
 
-The robustness and effectiveness of the trained neural network were rigorously evaluated, achieving a high test accuracy constantly above 90% on multiple setup configurations. For example, detailed confusion matrix analysis provided clear insights into model performance obtained with Windows 11, Tensorflow 2.18.1 on Python 3.12.11, running on AMD CPU setup:
+The robustness and effectiveness of the trained neural network were rigorously evaluated, achieving a high test accuracy constantly above 90% on multiple setup configurations. For example, detailed confusion matrix analysis provided clear insights into model performance obtained with Windows 11, Tensorflow 2.18.1 on Python 3.12.11, running on an AMD CPU setup:
 
 <img src="media/confusion_matrix.png" alt="Confusion matrix" width="400"/>
 
