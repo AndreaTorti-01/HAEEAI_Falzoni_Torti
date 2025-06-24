@@ -8,8 +8,8 @@ matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import itertools
 
-# Set the dataset folder here (should contain 'test' subfolder)
-DATA_DIR = 'dataset_left'  # <-- change as needed
+# Set the dataset folder
+DATA_DIR = 'dataset_left'
 ACCEL_SCALE = 16.0
 GYRO_SCALE = 2000.0
 KERAS_MODEL_NAME = 'norm_football_model.keras'
@@ -81,7 +81,7 @@ def main():
     y_test_i = le.transform(y_test)
     num_classes = len(le.classes_)
 
-    # --- Keras model ---
+    #Keras model
     keras_model = tf.keras.models.load_model(KERAS_MODEL_NAME)
     y_pred_keras = keras_predict(keras_model, X_test)
     acc_keras = (y_pred_keras == y_test_i).mean()
@@ -89,7 +89,7 @@ def main():
     print(f"Keras model accuracy: {acc_keras*100:.2f}%")
     plot_confusion(cm_keras, le.classes_, title="Keras Model Confusion Matrix")
 
-    # --- TFLite model ---
+    #TFLite model
     interpreter = tf.lite.Interpreter(model_path=TFLITE_MODEL_NAME)
     interpreter.allocate_tensors()
     y_pred_tflite = tflite_predict(interpreter, X_test)

@@ -159,7 +159,7 @@ class SnippetBrowser(Gtk.Window):
         ax.set_title(f"{ent['label']} @ {ent['timestamp']}")
         ax.legend()
 
-        # update status label: “snippet current/total”
+        # update status label
         total = len(self.filtered)
         self.status_label.set_text(f"Snippet {idx+1}/{total}")
 

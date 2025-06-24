@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import itertools
 
 def representative_data_gen():
-    # Load a small sample of training data for calibration
+    # Load a sample of training data for calibration
     DATA_DIR = 'dataset'
     ACCEL_SCALE = 16.0
     GYRO_SCALE = 2000.0
@@ -89,7 +89,7 @@ def main():
         f.write(tflite_model)
     print(f"Saved quantized TFLite model to '{tflite_path}'")
 
-    # 4) Emit C array as header (cross-platform, no xxd)
+    # 4) Emit C array as header
     h_path = 'norm_football_model.h'
     try:
         save_tflite_as_c_array(tflite_path, h_path)
@@ -99,7 +99,7 @@ def main():
         print(e)
         h_path = None
 
-    # Print C array size in KB (actual array size, not header file size)
+    # Print C array size in KB
     array_size = None
     if h_path is not None and os.path.exists(h_path):
         with open(h_path, 'r') as f:
@@ -114,7 +114,6 @@ def main():
         print("Could not determine C array size from header.")
 
     # 5) Evaluate quantized model on test set and print confusion matrix
-    # Load test data and label encoder (copy logic from norm_train.py)
     DATA_DIR = 'dataset'
     ACCEL_SCALE = 16.0
     GYRO_SCALE = 2000.0

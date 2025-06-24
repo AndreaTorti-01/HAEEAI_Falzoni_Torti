@@ -77,7 +77,7 @@ colors = plt.get_cmap('Dark2', len(event_types_of_interest) // 2 + 1)
 event_base_names = [e.split('_', 1)[1] for e in event_types_of_interest if e.startswith('INIZIO_')]
 event_base_color_map = {name: colors(i) for i, name in enumerate(event_base_names)}
 
-# Shade between INIZIO_<X> and FINE_<X>
+# Shade between INIZIO and FINE
 for name in event_base_names:
     start_key = f'INIZIO_{name}'
     end_key   = f'FINE_{name}'

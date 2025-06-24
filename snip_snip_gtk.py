@@ -36,7 +36,7 @@ class IMUViewer(Gtk.Window):
             Gdk.KEY_w: "WALKING", 
             Gdk.KEY_r: "RUNNING",
             Gdk.KEY_p: "PASS",
-            Gdk.KEY_h: "SHOOT"  # Changed from Gdk.KEY_t to Gdk.KEY_h
+            Gdk.KEY_h: "SHOOT"
         }
         
         # Colors

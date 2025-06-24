@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import re
-from scipy.signal import spectrogram  # add this import
+from scipy.signal import spectrogram
 
 # File paths
 imu_file = 'football_data/imu_data_20250529_183017.txt'
@@ -97,11 +97,11 @@ ax2.grid(True)
 
 # Plot events as dashed lines with shaded intervals
 colors = plt.get_cmap('Dark2', len(event_types_of_interest) // 2 + 1)
-# Map event base names (e.g., CAMMINATA) to a color
+# Map event base names to a color
 event_base_names = [e.split('_', 1)[1] for e in event_types_of_interest if e.startswith('INIZIO_')]
 event_base_color_map = {name: colors(i) for i, name in enumerate(event_base_names)}
 
-# Shade between INIZIO_<X> and FINE_<X>
+# Shade between INIZIO and FINE
 for name in event_base_names:
     start_key = f'INIZIO_{name}'
     end_key   = f'FINE_{name}'
