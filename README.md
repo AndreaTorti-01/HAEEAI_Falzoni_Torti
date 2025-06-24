@@ -14,7 +14,7 @@ This project demonstrates significant advancements in embedded AI solutions, eff
 ## Materials
 
 * Arduino Nano 33 BLE Sense (for data collection and local inference)
-* NVIDIA GPUs (for efficient AI model training)
+* NVIDIA and AMD GPUs (for efficient AI model training)
 * Laptop computer (for comprehensive data recording, management, and analysis)
 * iPhone equipped with a custom-built web application tailored specifically for precise and intuitive real-time event marking
 * Additional mounting hardware for secure attachment to shin guards
@@ -48,6 +48,11 @@ Custom-developed firmware, written in Arduino C, was employed on the Arduino Nan
   <img src="media/sock_1.jpg" width="300"/>
   <img src="media/sock_2.jpg" width="300"/>
 </div>
+
+
+For example, here it's possible to see the difference between **pass** and **shot** (linear acceleration and rotational speed magnitudes):
+
+<img src="media/pass_shoot.png" alt="Differences" width="900"/>
 
 
 ### Event tracking
@@ -107,7 +112,7 @@ The trained neural network underwent quantization to 8-bit precision using Tenso
 
 ## Quantitative results
 
-The robustness and effectiveness of the trained neural network were rigorously evaluated, achieving a high test accuracy of 92.5%. Detailed confusion matrix analysis provided clear insights into model performance:
+The robustness and effectiveness of the trained neural network were rigorously evaluated, achieving a high test accuracy constantly above 90% on multiple setup configurations. For example, detailed confusion matrix analysis provided clear insights into model performance obtained with Windows 11, Tensorflow 2.18.1 on Python 3.12.11, running on AMD CPU setup:
 
 <img src="media/confusion_matrix.png" alt="Confusion matrix" width="400"/>
 
