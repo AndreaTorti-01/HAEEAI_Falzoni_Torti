@@ -1,14 +1,7 @@
 # MOTION – Movement Observation and Tracking through Intelligent Onboard Network
 
-<div style="display: flex; gap: 10px; align-items: center; justify-content: left;">
-  <div>
-    <img src="media/motion_logo.png" alt="MOTION logo" width="268"/>
-  </div>
-  <div>
-    <img src="media/shot.gif" alt="Live classification" width="475"/>
-  </div>
-</div>
-
+<img src="media/motion_logo.png" alt="MOTION logo" width="268"/>
+<img src="media/shot.gif" alt="Live classification" width="475"/>
 
 ## Overview
 
@@ -47,30 +40,20 @@ The division by **0.163** was added in order to get a range of accelerations goi
 
 Custom-developed firmware, written in Arduino C, was employed on the Arduino Nano 33 BLE Sense, capturing real-time data from the onboard 3-axis accelerometer and 3-axis gyroscope sensors at a high sampling rate of 100 Hz. Concurrently, a dedicated Python script was developed to run on an accompanying laptop, systematically recording this incoming sensor data along with Unix millisecond timestamps to facilitate precise synchronization and later data alignment.
 
-<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
-  <img src="media/teleplot.gif" width="150"/>
-  <img src="media/sock_1.jpg" width="300"/>
-  <img src="media/sock_2.jpg" width="300"/>
-</div>
-
+<img src="media/teleplot.gif" width="200"/>
+<img src="media/sock_1.jpg" width="300"/>
+<img src="media/sock_2.jpg" width="300"/>
 
 For example, here it's possible to see the difference between **pass** and **shot** (linear acceleration and rotational speed magnitudes):
 
 <img src="media/pass_shoot.png" alt="Differences" width="900"/>
 
-
 ### Event tracking
 
 Real-time event marking was executed using a bespoke web application built using Claude AI technology, running smoothly on an iPhone. During data collection sessions, one engineer performed the football activities while the other observed the gameplay and manually annotated events by tapping the appropriate buttons on the phone interface. This process generated timestamped labels that aligned precisely with the sensor data, ensuring high accuracy and reliability during the subsequent labeling and training phases.
 
-<div style="display: flex; gap: 10px; align-items: center; justify-content: left;">
-  <div>
-    <img src="media/claude_1.jpg" alt="Claude 1" width="275"/>
-  </div>
-  <div>
-    <img src="media/claude_2.jpg" alt="Claude 2" width="275"/>
-  </div>
-</div>
+<img src="media/claude_1.jpg" alt="Claude 1" width="275"/>
+<img src="media/claude_2.jpg" alt="Claude 2" width="275"/>
 
 ### Data processing and labeling
 
