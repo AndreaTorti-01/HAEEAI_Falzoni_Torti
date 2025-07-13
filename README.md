@@ -63,7 +63,7 @@ Post-acquisition, the raw sensor data underwent meticulous processing through a 
 
 | _SNIP SNIP_ software | Data view and edit |
 |:-----------:|:-------------:|
-| <img src="media/snip_snip.gif" alt="SNIP SNIP!" width="500"/> | <img src="media/data_edit.gif" alt="Data view and edit" width="434"/> |
+| <img src="media/snip_snip.gif" alt="SNIP SNIP!" width="400"/> | <img src="media/data_edit.gif" alt="Data view and edit" width="350"/> |
 
 ### Model training
 
