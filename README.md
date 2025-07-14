@@ -43,7 +43,7 @@ Custom-developed firmware, written in Arduino C, was employed on the Arduino Nan
 
 | Teleplot visualization | Setup on shin guard |
 |:-----------:|:-------------:|
-| <img src="media/teleplot.gif" width="200"/> | <img src="media/sock_1.jpg" width="300"/> <img src="media/sock_2.jpg" width="300"/> |
+| <img src="media/teleplot.gif" width="360"/> | <img src="media/sock_1.jpg" width="300"/> <img src="media/sock_2.jpg" width="300"/> |
 
 For example, here it's possible to see the difference between **pass** and **shot** (linear acceleration and rotational speed magnitudes):
 
